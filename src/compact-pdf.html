@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>{{ RAW.name }}</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    {{{styleSheet "compact-pdf.css"}}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    {{{styleSheet "compact-html.css"}}}
   </head>
   <body>
     <main>
@@ -53,7 +53,9 @@
   <p>{{{ summary }}}</p>
   {{> highlights }}
   {{#if keywords}}
-  <span class="keywords">{{#each keywords}}{{{ . }}} {{/each}}</span>
+    <span class="keywords">
+      {{#each keywords}}{{{ . }}}{{#unless @last}}, {{/unless}} {{/each}}
+    </span>
   {{/if}}
 </div>
 {{/inline}}
@@ -71,7 +73,9 @@
   <p>{{{ summary }}}</p>
   {{> highlights }}
   {{#if keywords}}
-  <span class="keywords">{{#each keywords}}{{{ . }}} {{/each}}</span>
+    <span class="keywords">
+      {{#each keywords}}{{{ . }}}{{#unless @last}}, {{/unless}} {{/each}}
+    </span>
   {{/if}}
 </div>
 {{/inline}}
@@ -85,7 +89,7 @@
 {{#*inline "header-info"}}{{/inline}}
 {{> section/info }}
 {{> skills _icon="icon-skills"}}
-{{> section/employment _icon="icon-employment"}}
+{{> employment _icon="icon-employment"}}
 {{> section/projects _icon="icon-projects"}}
 {{> section/governance _icon="icon-governance"}}
 {{> section/education _icon="icon-education"}}
