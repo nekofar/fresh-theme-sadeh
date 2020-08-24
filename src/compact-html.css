@@ -75,9 +75,14 @@ thead {
   display: none;
 }
 
-table td {
+tbody td {
   font-size: 1em;
   vertical-align: top;
+}
+
+tbody td.keywords {
+  font-size: 1em;
+  font-style: italic;
 }
 
 #contact {
