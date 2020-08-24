@@ -1,84 +1,37 @@
 {{ r.name }}
 ============
-{{#if r.contact.email }}Email: {{{ r.contact.email }}}{{/if}}
-{{#if r.contact.phone }}Tel: {{{ r.contact.phone }}}{{/if}}
-{{#if r.contact.website }}Web: {{{ r.contact.website }}}{{/if}}
+{{#has 'contact.email' }}Email: {{{ r.contact.email }}}{{/has}}
+{{#has 'contact.phone' }}Tel: {{{ r.contact.phone }}}{{/has}}
+{{#has 'contact.website' }}Web: {{{ r.contact.website }}}{{/has}}
 
-{{#if r.info.brief }}{{{ r.info.brief }}}{{/if}}
+{{> section/info }}
 
-{{#if r.skills}}
-## SKILLS
+{{> section/skills }}
 
-{{#each r.skills.sets}}
-  - {{{ name }}}: {{#each this.skills}}{{{ this }}} {{/each}}
-{{/each}}
-{{/if}}
+{{> section/employment }}
 
-{{#if r.employment}}
-## EMPLOYMENT
+{{> section/projects }}
 
-{{#each r.employment.history }}
-  {{#compare @index 4 operator="<"}}
-### {{{ position }}}, {{{ employer }}} ({{formatDate safe.start 'YYYY-MM' }} -- {{formatDate safe.end 'YYYY-MM' }})
-{{{ summary }}}
-{{#if highlights}}
-{{#each highlights}}
-  - {{{ this }}}
-{{/each}}
-{{/if}}
+{{> section/governance }}
 
-  {{/compare}}
-  {{#compare @index 4 operator=">="}}
-    {{#compare @index 4 operator="=="}}
-### Previously...
-Prior to {{{ employer }}}, I worked on a range of projects for companies large and small.
-    {{/compare}}
-  - {{{ position }}}, {{{ employer }}}
-  {{/compare}}
-{{/each}}
-{{/if}}
+{{> section/education }}
 
-{{#if r.education}}
-## EDUCATION
+{{> section/affiliation }}
 
-{{#each r.education.history}}
-### {{{ institution }}} ({{formatDate safe.start 'YYYY-MM' }} — {{formatDate safe.end 'YYYY-MM' }})
-{{#if summary }}
-{{{ summary }}}
-{{/if}}
-{{#if courses}}
-{{#each courses}}
-  - {{{ this }}}{{/each}}{{/if}}
-{{/each}}
-{{/if}}
-{{#if r.writing}}
-## WRITING
+{{> section/samples }}
 
-{{#each r.writing}}
-### {{{ title }}} ({{formatDate safe.date 'YYYY-MM' }})
-{{{ summary }}}
-{{/each}}
-{{/if}}
+{{> section/writing }}
 
-{{#if r.service }}
-## SERVICE
+{{> section/reading }}
 
-{{#each r.service.history}}
-### {{{ organization }}} ({{formatDate safe.start 'YYYY-MM' }} — {{formatDate safe.end 'YYYY-MM' }})
-{{{ summary }}}
-{{#if highlights}}
-{{#each highlights}}
-  - {{{ this }}}
-{{/each}}
-{{/if}}
+{{> section/service }}
 
-{{/each}}
-{{/if}}
-{{#if r.recognition}}
-## RECOGNITION
+{{> section/recognition }}
 
-{{#each r.recognition}}
-### {{{ title }}}, {{{ from }}} ({{formatDate safe.date 'MMM YYYY' }})
-{{{ summary }}}
-{{/each}}
-{{/if}}
+{{> section/extracurricular }}
+
+{{> section/speaking }}
+
+{{> section/references }}
+
+{{> section/interests }}

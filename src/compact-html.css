@@ -1,5 +1,5 @@
 html, body, main, section, header, ul, p, h1, h2, h3 {
-  font-family: Calibri, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
+  font-family: {{{fontList 'default'}}};
   font-size: 12px;
   margin: 0; padding: 0;
   display: block;
@@ -45,12 +45,9 @@ li {
   margin-left: 2em;
 }
 
-h3 {
-  margin-top: 1em;
-}
-
 p, li {
   text-align: justify;
+  clear: both;
 }
 
 .tenure {
@@ -69,10 +66,8 @@ main > header {
 }
 
 
-main > header > h1 {
-  float: left;
-  font-size: 1.5em;
-  text-transform: uppercase;
+h3 {
+  display: inline-block;
   line-height: 1;
 }
 #contact {
@@ -87,7 +82,19 @@ main > header > h1 {
   margin-left: 5px;
 }
 
-h2 > span.fa {
+span.fa {
   text-align: left;
   margin-right: 3px;
+  float: left;
+}
+
+section > div {
+  margin-bottom: 1em;
+  clear: both;
+}
+
+span.keywords {
+  font-size: 10px;
+  color: gray;
+  text-align: right;
 }
