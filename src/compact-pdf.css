@@ -20,6 +20,7 @@ a:hover {
 
 h1 {
   font-size: 1.5em;
+  line-height: 0.9;
 }
 
 h2 {
@@ -72,6 +73,11 @@ p, li {
 
 thead {
   display: none;
+}
+
+table td {
+  font-size: 1em;
+  vertical-align: top;
 }
 
 #contact {
