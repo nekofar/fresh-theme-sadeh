@@ -1,7 +1,7 @@
 {
-  "title": "compact",
-  "description": "A compact résumé theme for FluentCV.",
-  "author": "hacksalot <hacksalot@indevious.com> (https://github.com/hacksalot)",
+  "title": "sadeh",
+  "description": "A compact résumé theme for HackMyResume.",
+  "author": "Milad Nekofar <milad@nekofar.com> (https://github.com/nekofar)",
   "engine": "handlebars",
   "fonts": {
     "all": {

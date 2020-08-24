@@ -1,10 +1,10 @@
 {
-  "name": "fresh-theme-compact",
-  "version": "0.1.0",
+  "name": "fresh-theme-sadeh",
+  "version": "1.0.0",
   "description": "A compact, no-frills résumé theme for candidates with lengthy work histories.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fluentdesk/fresh-theme-compact.git"
+    "url": "https://github.com/nekofar/fresh-theme-sadeh.git"
   },
   "keywords": [
     "resume",
@@ -16,18 +16,12 @@
     "JSON",
     "employment"
   ],
-  "author": "hacksalot <hacksalot@indevious.com> (http://indevious.com)",
+  "author": "Milad Nekofar <milad@nekofar.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fluentdesk/fresh-theme-compact/issues"
+    "url": "https://github.com/nekofar/fresh-theme-sadeh/issues"
   },
-  "main": "compact.json",
-  "homepage": "https://github.com/fluentdesk/fresh-theme-compact",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "main": "theme.json",
+  "homepage": "https://github.com/nekofar/fresh-theme-sadeh",
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"]
 }
