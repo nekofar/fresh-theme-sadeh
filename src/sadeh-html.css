@@ -53,6 +53,10 @@ main > header {
   position: relative;
 }
 
+header {
+  page-break-inside: avoid;
+}
+
 section {
   margin-top: 1em;
 }
@@ -81,8 +85,8 @@ tbody td {
 }
 
 tbody td.keywords {
-  font-size: 1em;
-  font-style: italic;
+  font-size: 0.9em;
+  font-style: "italic";
 }
 
 #contact {
