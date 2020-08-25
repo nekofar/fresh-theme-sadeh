@@ -59,6 +59,7 @@ header {
 
 section {
   margin-top: 1em;
+  page-break-before: always;
 }
 
 li {
@@ -85,8 +86,7 @@ tbody td {
 }
 
 tbody td.keywords {
-  font-size: 1em;
-  font-style: italic;
+  font-size: 0.9em;
 }
 
 #contact {
