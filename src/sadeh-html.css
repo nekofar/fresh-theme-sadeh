@@ -53,6 +53,10 @@ main > header {
   position: relative;
 }
 
+header {
+  page-break-inside: avoid;
+}
+
 section {
   margin-top: 1em;
 }
