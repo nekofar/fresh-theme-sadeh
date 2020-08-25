@@ -101,6 +101,7 @@ span.fa {
   text-align: left;
   margin-right: 3px;
   float: left;
+  line-height: 1;
 }
 
 section > div {
