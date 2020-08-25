@@ -59,7 +59,7 @@ header {
 
 section {
   margin-top: 1em;
-  page-break-before: always;
+  page-break-inside: avoid; 
 }
 
 li {
