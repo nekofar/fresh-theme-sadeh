@@ -1,8 +1,10 @@
 {
   "name": "fresh-theme-sadeh",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "homepage": "https://github.com/nekofar/fresh-theme-sadeh",
-  "authors": ["Milad Nekofar <milad@nekofar.com>"],
+  "authors": [
+    "Milad Nekofar <milad@nekofar.com>"
+  ],
   "description": "A compact, no-frills résumé theme for candidates with lengthy work histories.",
   "main": "theme.json",
   "keywords": [
@@ -15,5 +17,11 @@
     "JSON"
   ],
   "license": "MIT",
-  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"]
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
