@@ -27,7 +27,7 @@
 {{#*inline "icon-employment"}}<span class="fa fa-building"></span>{{/inline}}
 {{#*inline "icon-projects"}}<span class="fa fa-star"></span>{{/inline}}
 {{#*inline "icon-governance"}}<span class="fa fa-balance-scale"></span>{{/inline}}
-{{#*inline "icon-education"}}<span class="fa fa-mortar-board"></span>{{/inline}}
+{{#*inline "icon-education"}}<span class="fa fa-graduation-cap"></span>{{/inline}}
 {{#*inline "icon-extracurricular"}}<span class="fa fa-child"></span>{{/inline}}
 {{#*inline "icon-service"}}<span class="fa fa-child"></span>{{/inline}}
 {{#*inline "icon-affiliation"}}<span class="fa fa-share-alt"></span>{{/inline}}
@@ -38,7 +38,7 @@
 {{#*inline "icon-speaking"}}<span class="fa fa-users"></span>{{/inline}}
 {{#*inline "icon-testimonials"}}<span class="fa fa-quote-right"></span>{{/inline}}
 {{#*inline "icon-references"}}<span class="fa fa-thumbs-o-up"></span>{{/inline}}
-{{#*inline "icon-interests"}}<span class="fa fa-bicycle"></span>{{/inline}}
+{{#*inline "icon-interests"}}<span class="fa fa-puzzle-piece"></span>{{/inline}}
 
 {{#*inline "body-employment" }}
 <div>
@@ -72,6 +72,39 @@
     <span class="tenure">{{dateRange .}}</span>
   <p>{{{ summary }}}</p>
   {{> highlights }}
+  {{#if keywords}}
+    <span class="keywords">
+      {{#each keywords}}{{{ . }}}{{#unless @last}}, {{/unless}} {{/each}}
+    </span>
+  {{/if}}
+</div>
+{{/inline}}
+
+{{#*inline "body-service" }}
+<div>
+  <h3><em>{{ position }}</em>,
+    {{#if url }}
+    <a href="{{{ url }}}">{{ organization }}</a>
+    {{else}}
+    {{ organization }}
+    {{/if}}
+    </h3>
+    <span class="tenure">{{dateRange .}}</span>
+  <p>{{{ summary }}}</p>
+  {{> highlights }}
+  {{#if keywords}}
+    <span class="keywords">
+      {{#each keywords}}{{{ . }}}{{#unless @last}}, {{/unless}} {{/each}}
+    </span>
+  {{/if}}
+</div>
+{{/inline}}
+
+{{#*inline "body-interests" }}
+<div>
+  <h3><em>{{ name }}</em></h3>
+  <span class="tenure">{{date date 'YYYY' }}</span>
+  <p>{{{ summary }}}</p>
   {{#if keywords}}
     <span class="keywords">
       {{#each keywords}}{{{ . }}}{{#unless @last}}, {{/unless}} {{/each}}
